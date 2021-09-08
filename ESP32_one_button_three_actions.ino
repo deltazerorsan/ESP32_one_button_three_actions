@@ -38,6 +38,7 @@ void setup(){
   if (millis() < long_ms) {
     result = "Click";
     while (millis() < double_ms) {
+      delay(20);                                  // A little bit of debouncing for bad buttons
       if (digitalRead(BUTTON_PIN) == 0) result = "Double";
     }
   } 
